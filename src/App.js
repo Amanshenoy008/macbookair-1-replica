@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Details from "./components/details";
+import Files from "./components/files";
+import Appointments from "./components/appointments";
+import Sidenav from "./components/sidenav";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="  font-sans flex flex-row gap-6">
+      <Sidenav />
+      <div className="flex flex-col gap-3 p-4 ">
+        <Details />
+        <div className="mr-4 flex flex-row gap-x-36 ">
+          <div className="self-end ">
+        <Files />
+        </div>
+        <div className="self-start " >
+        <Appointments />
+        </div>
+        </div>
+        
+      </div>
+     
     </div>
   );
 }
